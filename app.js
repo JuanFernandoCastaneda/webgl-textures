@@ -178,6 +178,9 @@ function main() {
         // Clearing both the color and the depth.
         gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
 
+        gl.bindTexture(gl.TEXTURE_2D, boxTexture);
+        gl.activeTexture(gl.TEXTURE0);
+
         tank.paint(gl);
 
         // 1. How we are going to draw.
